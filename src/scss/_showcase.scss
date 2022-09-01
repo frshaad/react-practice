@@ -1,0 +1,42 @@
+.showcase {
+	.header {
+		&__logo {
+			max-width: 50px;
+		}
+		&__menu {
+			display: flex;
+			
+			&__item {
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		&__desc {
+			.line {
+			}
+			.hello {
+			}
+			.name {
+				.red {
+				}
+			}
+			.desc {
+			}
+			.about-me-btn {
+			}
+		}
+		&__img {
+			max-width: 30%;
+			height: auto;
+		}
+	}
+
+	&__social {
+		&__link {
+		}
+		&__slash {
+		}
+	}
+}
