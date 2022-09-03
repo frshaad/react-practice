@@ -1,10 +1,11 @@
+import showcase from '../../data/showcaseData';
+import logo from '../../images/Logo.png';
 import Header from './Header';
 import ShowcaseBox from './ShowcaseBox';
-import showcase from '../../data/showcaseData';
 import SocialBtns from './SocialBtns';
 
 export default function Showcase() {
-	const { name, desc, logo, img, social } = showcase;
+	const { name, desc, img, social } = showcase;
 
 	return (
 		<>

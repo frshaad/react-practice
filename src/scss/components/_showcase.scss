@@ -1,12 +1,20 @@
-@use './variables' as *;
+@use '../util/breakpoint' as *;
+@use '../util/functions' as *;
+@use '../util/mixins' as *;
+@use '../util/variables' as *;
 
 .showcase {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
-	padding: 1rem 10rem;
+	padding: rem(16) rem(160);
 	padding-bottom: 5rem;
+
+	@include breakpoint-down(mobile) {
+		padding: rem(30);
+		padding-bottom: rem(50);
+	}
 
 	.header {
 		display: flex;
@@ -43,11 +51,18 @@
 
 	&__info {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
 
 		&__desc {
 			max-width: 60%;
+
+			@include breakpoint-down(mobile) {
+				display: flex;
+				flex-direction: column;
+				max-width: 100%;
+			}
 
 			.box {
 				display: flex;
@@ -77,6 +92,10 @@
 				font-size: 4rem;
 				font-weight: 700;
 
+				@include breakpoint-down(mobile) {
+					font-size: rem(50);
+				}
+
 				.red {
 					color: $red;
 					font-weight: 700;
@@ -87,6 +106,10 @@
 				margin-bottom: 3rem;
 
 				line-height: 1.5;
+
+				@include breakpoint-down(mobile) {
+					margin-bottom: 4rem;
+				}
 			}
 
 			.about-me-btn {
@@ -103,6 +126,12 @@
 				&:hover {
 					background-color: $black;
 				}
+
+				@include breakpoint-down(mobile) {
+					width: fit-content;
+					align-self: center;
+					margin-bottom: 2rem;
+				}
 			}
 		}
 
@@ -113,6 +142,13 @@
 
 			transition: 0.5s;
 
+			@include breakpoint-down(mobile) {
+				display: none;
+				max-width: 100%;
+				max-height: 25rem;
+				width: auto;
+			}
+
 			&:hover {
 				transform: translate(-20px, -20px);
 				box-shadow: 15px 15px 0 0 $red;
@@ -121,6 +157,8 @@
 	}
 
 	&__social {
+		display: flex;
+		justify-content: center;
 		&__link {
 			color: $black;
 			text-decoration: underline;
