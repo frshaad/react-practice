@@ -1,6 +1,6 @@
-import showcase from '../../data/showcaseData';
 import Header from './Header';
 import ShowcaseBox from './ShowcaseBox';
+import showcase from '../../data/showcaseData';
 import SocialBtns from './SocialBtns';
 
 export default function Showcase() {

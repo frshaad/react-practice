@@ -1,8 +1,10 @@
 export default function ShowcaseInfo({ desc }) {
 	return (
 		<article className="showcase__info__desc">
-			<span className="line"></span>
-			<span className="hello">hello</span>
+			<div className="box">
+				<span className="line"></span>
+				<span className="hello">hello</span>
+			</div>
 			<h2 className="name">
 				I'm <span className="red">mahdi</span> bahmani
 			</h2>
